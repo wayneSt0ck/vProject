@@ -4,14 +4,14 @@ var config = {
       url: 'http://my.site.com',
       //mongodb connection settings
       database: {
-          username:   'wayne5',
-          password:   'ilikepizza09',
+          username:   'test',
+          password:   'test',
       },
       //server details
       mqtt: {
-          username: 'gajzxcyc',
-          password: 'CzrpNiG1yMvC',
-          admin: 'blairc725@gmail.com'
+          username: 'test',
+          password: 'test',
+          admin: 'test'
       }
   },
   production: {
