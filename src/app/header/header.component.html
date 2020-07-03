@@ -1,0 +1,38 @@
+
+
+<mat-toolbar color="accent">
+  <span class="sort"></span>
+  <!-- </span> -->
+  <!-- <span class="spacer"></span> -->
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="" routerLinkActive="mat-primary">Home</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/login" routerLinkActive="mat-primary">Login</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/signup" routerLinkActive="mat-primary">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
+<mat-toolbar *ngIf="userIsAuthenticated" class="tb1">
+  <span class="spacer"></span>
+  <button mat-raised-button color="basic" style="margin: 10px;" *ngIf="userIsAdmin" (click)="pushTest()">Data Test</button>
+  <button mat-raised-button color="basic" style="margin: 10px;" (click)="openMaxMin()">Max/Mins</button>
+  <button mat-raised-button color="basic" style="margin: 10px;" (click)="openFoodTable()">Food Options</button>
+  <button mat-raised-button color="basic" style="margin: 10px;" (click)="openTimeTable()">Time Options</button>
+  <button mat-raised-button color="basic" style="margin: 10px;" (click)="openBinHistory()">Bin History</button>
+  <button mat-raised-button color="basic" style="margin: 10px;" *ngIf="userIsAdmin" (click)="openDialog()">Add Bin</button>
+  <button mat-raised-button color="basic" style="margin: 10px;" *ngIf="userIsAdmin" (click)="deleteLastBin()">Delete Last Bin</button>
+  <span class="sort"></span>
+  <mat-form-field>
+    <mat-select (selectionChange)="sortChanged(selected)" [(value)]="selected">
+      <mat-option value="option1">0 -> 9</mat-option>
+      <mat-option value="option2">9 -> 0</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-toolbar>

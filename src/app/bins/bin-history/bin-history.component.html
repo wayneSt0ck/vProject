@@ -1,0 +1,84 @@
+<div class="mainDiv">
+  <h2 mat-dialog-title>Time Info</h2>
+  <section class="example-section">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Bin Number </th>
+        <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">
+          {{element.name}}
+        </td>
+      </ng-container>
+
+      <!-- Start Date Column -->
+      <ng-container matColumnDef="sdate">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Start Date </th>
+        <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">{{element.sdate}} </td>
+        <!-- <td mat-cell *matCellDef="let element">
+          <mat-form-field class="testWidth">
+            <mat-label></mat-label>
+            <input matInput [matDatepicker]="picker"
+              [(ngModel)]="element.sdate"
+              (dateChange)="changeStartDateVal(element.name, $event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> -->
+          <!-- {{element.sdate}}  -->
+        <!-- </td> -->
+      </ng-container>
+
+      <!-- End Date Column -->
+      <ng-container matColumnDef="edate">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> End Date </th>
+        <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">{{element.edate}} </td>
+        <!-- <td mat-cell *matCellDef="let element">
+          <mat-form-field class="testWidth">
+            <mat-label></mat-label>
+            <input matInput [matDatepicker]="picker2"
+              [(ngModel)]="element.edate"
+              (dateChange)="changeEndDateVal(element.name, $event)">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field> -->
+          <!-- {{element.edate}}  -->
+          <!-- </td> -->
+      </ng-container>
+
+      <!-- Days Left Column -->
+      <ng-container matColumnDef="pdate">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Processed Date </th>
+        <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">{{element.pdate}} </td>
+      </ng-container>
+
+      <!-- Total Harvest Amount Column -->
+      <ng-container matColumnDef="hamount">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Harvest Amount </th>
+        <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">{{element.hamount}} </td>
+        <!-- <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">
+          <input matInput type="text" [(ngModel)]="element.hamount">
+        </td> -->
+      </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Actions </th>
+        <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">
+          <button (click)="showHistoryPlotWindow(element.id)" class = "material-icons" style="margin-left: 5px;" matTooltip="Plot Data">bar_chart</button>
+          <button (click)="downloadBinData(element.id)" class = "material-icons" style="margin-left: 5px;" matTooltip="Download Data">cloud_download</button>
+           <!-- {{element.action}}  -->
+          </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </section>
+
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close] (click)="closeTimePop()">Close</button>
+  </div>
+</div>

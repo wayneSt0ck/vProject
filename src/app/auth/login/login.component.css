@@ -1,0 +1,28 @@
+/* input color class */
+::ng-deep input.mat-input-element {
+  color: #ffffff !important;
+  font-size: 18px;
+}
+
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #ffffff !important;
+}
+
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+  background-color: #ffffff !important;
+}
+
+mat-card {
+  width: 60%;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}

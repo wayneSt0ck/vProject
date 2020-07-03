@@ -1,0 +1,84 @@
+<div class="mainDiv">
+  <h2 mat-dialog-title>Max/Min Settings</h2>
+  <section class="example-section">
+    <mat-form-field class="example-margin">
+      <mat-label>Min Temp</mat-label>
+      <input matInput type="number" [(ngModel)]="data.minTemp">
+    </mat-form-field>
+    <mat-form-field class="example-margin">
+      <mat-label>Max Temp</mat-label>
+      <input matInput type="number" [(ngModel)]="data.maxTemp">
+    </mat-form-field>
+    <br>
+    <mat-slider
+        class="tempMin"
+        [disabled]="disabled"
+        [invert]="invert"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [(ngModel)]="data.minTemp"
+        [vertical]="vertical">
+    </mat-slider>
+    <br>
+    <mat-slider
+        class="tempMax"
+        [disabled]="disabled"
+        [invert]="invert"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [(ngModel)]="data.maxTemp"
+        [vertical]="vertical">
+    </mat-slider>
+  </section>
+  <section class="example-section">
+    <mat-form-field class="example-margin">
+      <mat-label>Min Moisture</mat-label>
+      <input matInput type="number" [(ngModel)]="data.minMoisture">
+    </mat-form-field>
+    <mat-form-field class="example-margin">
+      <mat-label>Max Moisture</mat-label>
+      <input matInput type="number" [(ngModel)]="data.maxMoisture">
+    </mat-form-field>
+    <br>
+    <mat-slider
+        class="moistureMin"
+        [disabled]="disabled"
+        [invert]="invert"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [(ngModel)]="data.minMoisture"
+        [vertical]="vertical">
+    </mat-slider>
+    <br>
+    <mat-slider
+        class="moistureMax"
+        [disabled]="disabled"
+        [invert]="invert"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [(ngModel)]="data.maxMoisture"
+        [vertical]="vertical">
+    </mat-slider>
+  </section>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close] (click)="cancelMaxMin()">Close</button>
+    <span class = "spacer2"></span>
+    <button mat-button (click)="updateMaxMin()">Update</button>
+  </div>
+</div>
+
+<!--
+  Number of Current Bins
+  New Bin Number
+  What Esp Number it should have
+  What Sensors to Track
+  Set up Bin in Database
+ -->

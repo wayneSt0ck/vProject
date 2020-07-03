@@ -1,0 +1,59 @@
+<div class="mainDiv2">
+  <h2 mat-dialog-title>Bin Data</h2>
+  <section class="example-section">
+
+    <!-- <combo-chart-component
+      [view]="view"
+      [scheme]="comboBarScheme"
+      [colorSchemeLine]="lineChartScheme"
+      [results]="multi2"
+      [animations]="animations"
+      [lineChart]="lineChartSeries"
+      [timeline]="timeline"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [legendTitle]="legendTitle"
+      [legendPosition]="legendPosition"
+      [showGridLines]="showGridLines"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [showRightYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [yAxisLabelRight]="yAxisLabelRight">
+    </combo-chart-component> -->
+
+    <!-- [yAxisTickFormatting]="yLeftTickFormat"
+    [yLeftAxisScaleFactor]="yLeftAxisScale"
+    [yRightAxisScaleFactor]="yRightAxisScale"
+    [yRightAxisTickFormatting]="yRightTickFormat" -->
+
+
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [legend]="legend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [timeline]="timeline"
+      [results]="multi2"
+      [curve] = "curve"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+    >
+    </ngx-charts-line-chart>
+
+  </section>
+
+
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close] (click)="closeDataPop()">Close</button>
+  </div>
+</div>

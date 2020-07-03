@@ -1,0 +1,39 @@
+/* input color class */
+::ng-deep input.mat-input-element {
+  color: white;
+  font-size: 18px;
+}
+
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: white !important;
+  font-size: 18px;
+}
+
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: green !important;
+  font-size: 18px;
+}
+
+::ng-deep .mat-dialog-content {
+  padding: 10px !important;
+  background-color: white;
+}
+
+mat-form-field {
+  margin: 5px;
+}
+
+mat-checkbox {
+  margin: 5px;
+}
+
+p {
+  color: black;
+  font-size: 18px;
+}
+
+.spacer2 {
+  flex: 1 1 auto;
+}

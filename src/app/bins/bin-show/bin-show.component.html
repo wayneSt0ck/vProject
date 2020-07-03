@@ -1,0 +1,86 @@
+
+<mat-card class="inline-block" *ngFor="let bin of bins">
+  <mat-card-header>
+    <mat-card-title>
+      {{bin.title}}
+    </mat-card-title>
+
+    <span class = "spacer2"></span>
+    <button (click)="getBinData(bin)" class = "material-icons">bar_chart</button>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-tab-group headerPosition="below">
+      <mat-tab label="Info">
+        <div class = "circlePlot">
+          <div class="current"
+            ng-reflect-ng-style="[object Object]"
+            style="top: 50%; bottom: auto; left: 50%; transform: translateY(-50%) translateX(-50%) rotate(180deg); font-size: 35.7143px;">
+            <round-progress
+              [current]="100"
+              [max]="100"
+              [color]="bin.status"
+              [background]="'#6e6e6e'"
+              [radius]="30"
+              [stroke]="30"
+              [semicircle]="false"
+              [rounded]="false"
+              [clockwise]="true"
+              [responsive]="false"
+              [duration]="1"
+              [animation]="'easeInOutQuart'"
+              [animationDelay]="0"></round-progress>
+            </div>
+          <div class="current"
+            ng-reflect-ng-style="[object Object]"
+            style="top: 50%; bottom: auto; left: 50%; transform: translateY(-50%) translateX(-50%) rotate(180deg); font-size: 35.7143px;">
+            <round-progress
+              [current]="bin.moisture"
+              [max]="100"
+              [color]="'#1e4ef4'"
+              [background]="'#6e6e6e'"
+              [radius]="65"
+              [stroke]="30"
+              [semicircle]="false"
+              [rounded]="false"
+              [clockwise]="true"
+              [responsive]="false"
+              [duration]="1"
+              [animation]="'easeInOutQuart'"
+              [animationDelay]="0"></round-progress>
+            </div>
+          <div class = "flipPlot"
+            ng-reflect-ng-style="[object Object]"
+            style="transform: rotate(180deg); font-size: 35.7143px;">
+            <round-progress
+                [current]="bin.temp"
+                [max]="100"
+                [color]="'#f8891b'"
+                [background]="'6e6e6e'"
+                [radius]="100"
+                [stroke]="30"
+                [semicircle]="false"
+                [rounded]="false"
+                [clockwise]="true"
+                [responsive]="false"
+                [duration]="1"
+                [animation]="'easeInOutQuart'"
+                [animationDelay]="0"></round-progress>
+            </div>
+        </div>
+        <p class = "binInfo">
+          Temperature: {{bin.temp}} F<br>
+          Moisture: {{bin.moisture}} %<br>
+          Days Left: {{bin.daysleft}}<br>
+          Timestamp: {{bin.timestamp}}
+        </p>
+      </mat-tab>
+      <mat-tab label="Status">
+      </mat-tab>
+      <!-- <mat-tab label="Food">
+        <section class="svgPlot">
+          {{bin.temp}}
+        </section>
+      </mat-tab> -->
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

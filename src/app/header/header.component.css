@@ -1,0 +1,42 @@
+ul {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+}
+
+/* .spacer {
+  flex: 1 1 auto;
+} */
+
+.sort {
+  flex: 1 1 auto;
+}
+
+.tb1 {
+  height: 40px;
+  background-color: white;
+}
+
+mat-toolbar {
+  margin-bottom: 10px;
+}
+
+::ng-deep .mat-select-value-text {
+  color: black;
+}
+
+::ng-deep .mat-select {
+  color: red;
+}
+
+::ng-deep .mat-select-value {
+  color: red;
+}

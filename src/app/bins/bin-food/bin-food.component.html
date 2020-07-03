@@ -1,0 +1,87 @@
+<div class="mainDiv">
+  <mat-tab-group class="customTabs" headerPosition="below">
+    <mat-tab label="Save Food">
+      <h2 mat-dialog-title>Food Info</h2>
+      <section class="example-section">
+        <mat-card style="margin:2em; height: 300; overflow: auto">
+          <mat-selection-list style="height: 300px;" #binList [(ngModel)]="selectedBins">
+            <mat-list-option *ngFor="let bin of listOfBins" [value]="bin">
+              {{bin}}
+              <mat-divider></mat-divider>
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-card>
+        <mat-card style="margin:2em">
+          <mat-form-field class="example-form-field">
+            <mat-label>Food Type:</mat-label>
+            <mat-select [(value)]="chosenFood">
+              <mat-option *ngFor="let food of foods" [value]="food.viewValue">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-form-field">
+            <input matInput [matDatepicker]="picker"
+              style="font-size: 17px;"
+              autocomplete="off"
+              [(ngModel)]="today"
+              (dateChange)="updateGlobalData($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="example-form-field">
+            <mat-label>Food Amount (lbs):</mat-label>
+            <input matInput type="number" style="font-size: 17px;" autocomplete="off" [(ngModel)]="chosenFoodAmount">
+          </mat-form-field>
+          <button mat-raised-button style="margin-left: 30px;" (click)="saveFoodData()">Submit</button>
+        </mat-card>
+      </section>
+    </mat-tab>
+    <mat-tab label="Feeding History">
+      <div class="randomSection">
+        <h2 mat-dialog-title>Feeding History</h2>
+        <mat-form-field class="example-form-field" style="width: 100%;">
+          <mat-label>Bin Number:</mat-label>
+          <mat-select (selectionChange)="getBinFeedHistory($event)">
+            <mat-option *ngFor="let lbin of listOfBins" [value]="lbin">
+              {{lbin}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <section class="example-section">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Feed Date </th>
+              <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">
+                {{element.date}}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="ftype">
+              <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Feed Type </th>
+              <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">
+                {{element.ftype}}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="famount">
+              <th mat-header-cell *matHeaderCellDef [ngClass]="'customWidthClass'"> Feed Amount </th>
+              <td mat-cell [ngClass]="'customWidthClass'" *matCellDef="let element">
+                 {{element.famount}}
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </section>
+
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close] (click)="closeFoodPop()">Close</button>
+  </div>
+</div>

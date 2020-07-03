@@ -1,0 +1,91 @@
+/* input color class */
+::ng-deep input.mat-input-element {
+  color: white;
+  font-size: 18px;
+}
+
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: white !important;
+  font-size: 18px;
+}
+
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: green !important;
+  font-size: 18px;
+}
+
+.mainDiv {
+  min-width: 400px;
+}
+
+
+p {
+  color: black;
+  font-size: 18px;
+}
+
+.spacer2 {
+  flex: 1 1 auto;
+}
+
+.example-section {
+  /* display: flex; */
+  align-content: center;
+  align-items: center;
+  height: 600px;
+  overflow: auto;
+  /* height: 60px; */
+}
+
+.example-margin {
+  margin: 8px;
+}
+
+.tempMin {
+  width: 100%;
+  margin: 8px;
+}
+
+.tempMax {
+  width: 100%;
+  margin: 8px;
+}
+
+.moistureMin {
+  width: 100%;
+  margin: 8px;
+}
+
+.moistureMax {
+  width: 100%;
+  margin: 8px;
+}
+
+table {
+  width: 100%;
+}
+
+
+.customWidthClass{
+  align-content: center;
+  text-align: center;
+  width: 150px;
+  /* flex: 0 0 300px; */
+}
+
+.testWidth{
+  align-content: center;
+  text-align: center;
+  width: 140px;
+  /* flex: 0 0 300px; */
+}
+
+::ng-deep .red-snackbar {
+  background: rgb(243, 40, 33);
+}
+
+::ng-deep .green-snackbar {
+  background: rgb(23, 218, 17);
+}

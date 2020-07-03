@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Add A Bin</h2>
+<mat-form-field class="example-form-field">
+  <mat-label>Total Bins:</mat-label>
+  <input matInput type="text" [(ngModel)]="data.totalName">
+</mat-form-field>
+<mat-form-field class="example-form-field">
+  <mat-label>Current Bin:</mat-label>
+  <input matInput type="text" [(ngModel)]="data.currentName">
+</mat-form-field>
+<mat-form-field class="example-form-field">
+  <mat-label>Controller Number:</mat-label>
+  <input matInput type="text" [(ngModel)]="data.controllerName">
+</mat-form-field>
+<br>
+<mat-checkbox [(ngModel)]="tempCheck">Track Temperature Data</mat-checkbox>
+<mat-checkbox [(ngModel)]="moistureCheck">Track Moisture Data</mat-checkbox>
+<br>
+<br>
+<mat-checkbox [(ngModel)]="dbCheck">Save Bin to Database</mat-checkbox>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close] (click)="cancelBin()">Close</button>
+  <span class = "spacer2"></span>
+  <button mat-button (click)="addBin()">Add Bin</button>
+</div>
+
+<!-- <p>
+  This Works
+</p> -->
+
+<!--
+  Number of Current Bins
+  New Bin Number
+  What Esp Number it should have
+  What Sensors to Track
+  Set up Bin in Database
+ -->

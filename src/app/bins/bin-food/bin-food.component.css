@@ -1,0 +1,116 @@
+/* ::ng-deep input.mat-input-element {
+  color: white;
+  font-size: 18px;
+} */
+
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: white !important;
+  font-size: 18px;
+}
+
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: green !important;
+  font-size: 18px;
+}
+
+.not-empty-select.mat-selected {
+  color: white !important;
+}
+
+.not-empty-select.mat-selected {
+  color: white !important;
+}
+
+:host /deep/ .mat-select-value-text {
+  color: white !important;
+  font-size: 18px;
+}
+
+::ng-deep .mat-dialog-field.mat-focused {
+  padding: 10px !important;
+  background-color: white;
+}
+
+mat-divider {
+  border-width: 2px;
+  color: rgb(49, 49, 49);
+  /* width: 100%;
+  border-style: solid;
+  color: black; */
+}
+
+mat-card {
+  background-color: rgb(119, 119, 119);
+}
+
+
+mat-form-field {
+  margin: 5px;
+}
+
+mat-checkbox {
+  margin: 5px;
+}
+
+/* mat-selection-list {
+  max-height: 400px;
+} */
+
+.mainDiv {
+  width: 800px;
+  min-height: 600px;
+}
+
+.randomSection {
+  min-height: 554px;
+  padding: 10px;
+  /* background-color: rgb(119, 119, 119); */
+  align-content: center;
+}
+
+.example-section {
+  align-content: center;
+  align-items: center;
+  height: 550px;
+  overflow: auto;
+}
+
+::ng-deep .red-snackbar {
+  background: rgb(243, 40, 33);
+}
+
+::ng-deep .green-snackbar {
+  background: rgb(23, 218, 17);
+}
+
+::ng-deep.mat-tab-group {
+  height: 100%;
+  overflow: hidden;
+}
+
+::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active {
+  min-width: 48%!important;
+  padding: 3px!important;
+  margin: 3px!important;
+  overflow: hidden;
+}
+
+.testWidth{
+  align-content: center;
+  text-align: center;
+  width: 140px;
+  /* flex: 0 0 300px; */
+}
+
+table {
+  width: 100%;
+}
+
+.customWidthClass{
+  align-content: center;
+  text-align: center;
+  width: 150px;
+  /* flex: 0 0 300px; */
+}

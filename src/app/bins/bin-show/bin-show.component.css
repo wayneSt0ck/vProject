@@ -1,0 +1,88 @@
+mat-card {
+  min-width: 250px;
+  max-width: 250px;
+
+  min-height: 370px;
+  margin: 20px;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+.binInfo {
+  font-size: 15px;
+}
+
+.spacer2 {
+  flex: 1 1 auto;
+}
+
+mat-card-title {
+  height: 15px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+mat-card-content {
+  height: 395px;
+  /* flex-wrap: wrap; */
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+round-progress {
+  margin: auto;
+}
+
+
+.current {
+  position: absolute;
+  color: #bbb;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.circlePlot {
+  position: relative;
+  margin: 20px auto;
+}
+
+.svgPlot {
+  align-items: center;
+  align-content: center;
+  /* height: 100%; */
+  /* overflow: hidden; */
+  /* background-color: lightcoral; */
+}
+
+.svgInfo {
+  align-items: center;
+  align-content: center;
+  /* height: 100%; */
+  /* overflow: hidden; */
+  /* background-color: lightcoral; */
+}
+
+.inline-block {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* ::ng-deep.mat.tab.body {
+  height: 100%;
+} */
+
+::ng-deep.mat-tab-group {
+  height: 100%;
+  overflow: hidden;
+}
+
+::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active {
+  min-width: 48%!important;
+  padding: 3px!important;
+  margin: 3px!important;
+  overflow: hidden;
+ }

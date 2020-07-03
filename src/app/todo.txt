@@ -1,0 +1,53 @@
+/*
+
+- Add the update check - if sensor data has stalled or disconnected, add feature check - 06/01/20
+  - Add bool for each bin that is true if data is still streaming or false if data has stalled - 06/01/20
+  - If data has stalled, no new information should be stored for that bin - 06/01/20
+  - If data has stalled, create new color status for frozen data stream - 06/01/20
+
+- Max/Min Popup
+  - Add Success/Fail feature on updating of max/min - 06/01/20
+
+- Finish final bin information status
+  - Move all data to new table for finished bin data - 06/04/20
+  - Delete existing info from active table or update current bin to have no information - 06/05/20
+  - Add Stop Data Functionality - 06/01/20
+
+- Add new popup or page for finished data - same kind of list format as bin start with actions on the right side of popup
+  - Add graphing feature - 06/08/20
+  - Add data structure for finished info - 06/08/20
+  - Add download data function - 06/09/20
+
+- Add Check for MQTT initialization
+  - if check fails - reconnect - 06/11/20
+
+- Add features for graphs
+  - Feed Data
+    - Annotations or Asymptotes where feed matches dates - 06/12/20
+    - Vertical Bar graph on dates where feeding happened - Sent a question to ngxCharts devs requesting this feature
+  - Option to enable and disable data
+
+- Features for Bin Modules
+  - Add status colors for different errors - 06/01/20
+    - Hoverable text?
+  - Store status history for each bin - kind of 06/01/20
+  - Disconnect Check for moisture and temp sensor
+
+- Login features
+  - Figure out how to not delete token after x amount of time - Fixed for now 06/05/20
+  - Either remove register feature or figure out how to only let admin see it
+    - Admin - Enable page and button only when admin logs in - 06/05/20
+  - Figure out a way to hide admin username in code (includes("blairc")) <-- Add this to the admin .js file (helper.js) - 06/09/20
+  - Email verification? - Not Right now 06/09/20
+  - Display error with for wrong login credentials - Not RIght now 06/09/20
+
+- Hide/show User Features
+  - Hide/show test buttons if not admin - 06/12/20
+
+- When data is saved, save it locally as well (This will update graphs realtime)
+
+- Launch
+  - When to do it
+  - How to push both frontend and backend onto hosting platform - 06/12/20
+
+*/
