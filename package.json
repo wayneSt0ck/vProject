@@ -27,7 +27,7 @@
     "@okta/okta-signin-widget": "^4.0.2",
     "@swimlane/ngx-charts": "^14.0.0",
     "angular-svg-round-progressbar": "^3.0.1",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
